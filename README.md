@@ -9,7 +9,7 @@ Uses OpenWeatherMap’s free API.
 Setup Locally
 
 Install JDK 17 and Maven.
-Clone this repository:git clone https://github.com/your-username/weather-bot.git
+Clone this repository:git clone https://github.com/Nuii-tekky/WeatherBro.git
 cd weather-bot
 
 
