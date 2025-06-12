@@ -8,8 +8,8 @@ Uses OpenWeatherMap’s free API.
 
 Setup Locally
 
-Install JDK 17 and Maven.
-Clone this repository:git clone https://github.com/Nuii-tekky/WeatherBro.git
+Install JDK 17 and Maven Daemon (mvnd) from mvnd.io.
+Clone this repository:git clone https://github.com/Nuii-tekky/WeatherBot.git
 cd weather-bot
 
 
@@ -17,10 +17,28 @@ Create a .env file in the project root:BOT_TOKEN=your_telegram_bot_token
 API_KEY=your_openweathermap_api_key
 
 
-Run:mvn clean package
+Run:mvnd clean package
 java -jar target/weather-bot-1.0.0-shaded.jar
 
 
+
+Deployment on Render (Free Tier)
+
+Sign up at Render and connect your GitHub account.
+Create a Web Service:
+Select your weather-bot repository.
+Set Runtime to Java.
+Build Command: mvnd clean package.
+Start Command: java -jar target/weather-bot-1.0.0-shaded.jar.
+Instance Type: Free.
+
+
+Add environment variables in Render’s dashboard:
+BOT_TOKEN: Your Telegram bot token.
+API_KEY: Your OpenWeatherMap API key.
+
+
+Deploy and test your bot in Telegram.
 
 Usage
 
@@ -35,5 +53,3 @@ java-dotenv 5.2.2
 logback-classic 1.4.11
 maven-shade-plugin 3.4.1
 
-Upcoming: Deployment on Render
-   Instructions for deploying to Render’s free tier will be added soon.
