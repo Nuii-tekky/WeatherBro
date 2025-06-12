@@ -7,7 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class WeatherBot extends TelegramLongPollingBot {
-    private final String botUsername = "@WeatherActivityBot"; // Replace with your bot's username
+    private final String botUsername = "@WeatherWatchBroBot"; 
     private final WeatherService weatherService;
     private final ActivitySuggester activitySuggester;
 
