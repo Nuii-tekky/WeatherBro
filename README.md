@@ -33,7 +33,7 @@ Start Command: java -jar target/weather-bot-1.0.0-shaded.jar.
 Instance Type: Free.
 
 
-Add environment variables in Render’s dashboard:
+Add environment variables :
 BOT_TOKEN: Your Telegram bot token.
 API_KEY: Your OpenWeatherMap API key.
 
