@@ -42,6 +42,7 @@ public class WeatherBot extends TelegramLongPollingBot {
     }
 
     private String processMessage(String message) {
+        String returntext ;
         if (message.toLowerCase().startsWith("weather in ")) {
             String city = message.substring("weather in ".length()).trim();
             try {
@@ -50,9 +51,10 @@ public class WeatherBot extends TelegramLongPollingBot {
                 return String.format("Weather in %s: %s, %.1f°C\n%s",
                         city, weather.getCondition(), weather.getTemperature(), suggestion);
             } catch (Exception e) {
-                return "Sorry, I couldn’t fetch the weather for " + city + ". Try another city!";
+                returntext = "Sorry, I couldn’t fetch the weather for " + city + ". Try another city!";
             }
         }
-        return "Send 'weather in [city]' to get the weather and activity suggestions.";
+        returntext = "Send 'weather in [city]' to get the weather and activity suggestions.";
+        return returntext;
     }
 }
