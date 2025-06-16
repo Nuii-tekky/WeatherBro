@@ -53,9 +53,10 @@ public class WeatherBot extends TelegramLongPollingBot {
                         city, weather.getCondition(), weather.getTemperature(), suggestion);
             } catch (Exception e) {
                 returntext = "Sorry, I couldn’t fetch the weather for " + city + ". Try another city!";
+                System.err.println("Error fetching weather: " + e.getMessage());
             }
         }
-        returntext = "Send 'weather in [city]' to get the weather and activity suggestions.";
+        else { returntext = "Send 'weather in [city]' to get the weather and activity suggestions." ;}
         return returntext;
     }
 }
