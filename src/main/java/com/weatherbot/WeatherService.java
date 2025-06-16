@@ -13,7 +13,7 @@ public class WeatherService {
 
     static {
         Dotenv dotenv = Dotenv.load();
-        API_KEY = dotenv.get("API_KEY");
+        API_KEY = dotenv.get("WEATHERSERVICE_API_KEY");
     }
 
     public WeatherData getWeather(String city) throws Exception {

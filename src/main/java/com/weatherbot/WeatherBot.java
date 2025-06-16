@@ -16,6 +16,7 @@ public class WeatherBot extends TelegramLongPollingBot {
         this.weatherService = new WeatherService();
         this.activitySuggester = new ActivitySuggester();
     }
+    
 
     @Override
     public String getBotUsername() {
